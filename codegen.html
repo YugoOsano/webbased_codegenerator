@@ -7,8 +7,10 @@
 
   <body>
     <div id="body">
-      <p><h2>Hello!</h2></p>
-      
+      <div id="hello">
+	<p><h2>Hello!</h2></p>
+      </div>
+
       <form name="jsform">
 	<div class="block">
 	  <label>
@@ -24,7 +26,7 @@
 	</div>
 
 	<div class="block">	
-	  <select name="select">
+	  <select id="sel1" name="select" onchange="sel1change();">
 	    <option value="a">option1</option>
 	    <option value="b">option2</option>
 	    <option value="c">option3</option>

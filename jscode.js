@@ -10,16 +10,42 @@ $(function(){
 
     $(".block").css("background", "#ddd");
 
-    var a = $("#type_php").attr("type");
+
     //   var written = document.jsform.txtb.value;
     var written = $("#folder").attr("value"); //-- same as the above --
 
     $(document.body).append(written);
-    $("#code").append(a);
-
+ 
     //$(document.body).append($
     //			    ("<img src='imagesample.png' width='500'>"));
+
+    //-- a sample of an event function quoted from:
+    // http://webdesignrecipes.com/jquery-beginners-guide-for-web-design/
+    $("#hello").hover(function()
+		      {
+			  $(this).css("color","red");
+		      },
+		      function()
+		      {
+			  $(this).css("color","black");
+		      }
+		     );
  
+    //-- event handling for onChange of a select element -- 
+    //   http://elearn.jp/jmemo/jquery/memo-77.html
+    $('#sel1').change( function () {
+	val1   = $(this).val();
+	index  = $(this).index();
+	var a = $("#type_php").attr("type");
+
+	//alert(val1);
+	$(document.body).append(index);
+	$(document.body).append(val1);
+	
+	$("#code").append(a);
+
+    } );
     
 })
+
 
